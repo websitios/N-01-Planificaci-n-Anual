@@ -1,0 +1,607 @@
+\documentclass[11pt,a4paper]{article}
+
+% ==== PAQUETES NECESARIOS ====
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, margin=2.2cm]{geometry}
+\usepackage{pgf}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usetikzlibrary{shadows}
+%\tcbuselibrary{shadows}
+\usepackage{tikz}
+\tcbuselibrary{skins}
+\usepackage{tabularx, array}
+\usepackage[table]{xcolor}
+\usepackage{mathptmx} % Times New Roman
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{makecell}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{changepage}
+\usepackage{enumitem}  % Personalización de listas (itemize, enumerate)
+
+\usepackage{changepage} % Para adjustwidth
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\usepackage{csquotes}
+\usepackage[style=apa, backend=biber, sortcites=true]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{bibliografia.bib} % archivo externo de referencias
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ==== COLORES PERSONALIZADOS ====
+\definecolor{azultitulo}{RGB}{44,93,176}
+\definecolor{azulclaro}{RGB}{234,241,252}
+\definecolor{azultexto}{RGB}{0,76,153}
+\definecolor{azulencabezado}{RGB}{44,93,176}
+\definecolor{fondotitulo}{RGB}{200,200,200} % Adjust RGB as needed
+\definecolor{grisclaro}{RGB}{220,220,220} % Light gray
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Encabezado y pie de página
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % limpiar encabezado y pie
+% Encabezado
+\usepackage{fancyhdr}
+\setlength{\headheight}{17.32092pt}
+\pagestyle{fancy}
+\fancyhf{}
+% Encabezado centrado visualmente
+\lhead{%
+  \raisebox{-0.2ex}{\includegraphics[height=0.5cm]{img/iep.png}}%
+  \hspace{0.8em}%
+  \raisebox{0.2ex}{\textcolor{azulencabezado}{\small IEP N° 70195 - Huapaca Santiago}}%
+}
+\rhead{\textcolor{azulencabezado}{\small \textbf{Planificación Anual - 1ro}}}
+% Pie de página
+\rfoot{\textcolor{gray}{\thepage}}
+% Líneas horizontales
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+% CAMBIO DE COLOR DE LAS LÍNEAS
+\makeatletter
+\patchcmd{\headrule}{\hrule}{\color{azulencabezado}\hrule}{}{}
+\patchcmd{\footrule}{\hrule}{\color{azulencabezado}\hrule}{}{}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+% ==== INICIO DOCUMENTO ====
+\begin{document}
+\small
+
+% ==== I. DATOS PERSONALES ====
+\vspace{1.5em}
+\noindent
+{\color{azultexto}\bfseries\Large I. DATOS PERSONALES}\\[-0.3em]
+{\color{azultexto}\rule{\textwidth}{0.6pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.6em}
+\begin{adjustwidth}{-0.0cm}{-0.0cm}
+\begin{tcolorbox}[
+    enhanced,
+    sharp corners=all,
+    boxrule=0pt,
+    colback=white,
+    colframe=azultitulo,
+    borderline west={2.5pt}{0pt}{azultitulo},
+    drop shadow southeast,
+    left=8pt, right=8pt, top=6pt, bottom=6pt,
+  ]
+  {\footnotesize  % <-- Reducción del tamaño aquí
+  \renewcommand{\arraystretch}{1.25}
+  \setlength{\tabcolsep}{4.5pt}
+  \begin{tabularx}{\linewidth}{>{\bfseries\color{azultitulo}}m{2.4cm}
+                                >{\RaggedRight\arraybackslash}X
+                                >{\bfseries\color{azultitulo}}m{2.4cm}
+                                >{\RaggedRight\arraybackslash}X
+                                >{\bfseries\color{azultitulo}}m{2.4cm}
+                                >{\RaggedRight\arraybackslash}X}
+    DRE         & Junín           & UGEL        & Huancayo           & I.E.      & N\textsuperscript{o} 31554 - JCM \\
+    Modalidad   & EBR             & Nivel       & Educ. Primaria     & Área      & Educación Física      \\
+    Nombre      & Walter          & Apellidos   & Seguil Espinoza    & Cargo     & Profesor              \\
+    Ciclo       & III             & Grado       & 1\textsuperscript{o} & Sección   & A - B - C             \\
+  \end{tabularx}
+  } % <-- Fin del bloque de tamaño reducido
+\end{tcolorbox}
+\end{adjustwidth}
+
+
+% ==== II. PRESENTACIÓN ====
+\vspace{1.5em}
+\noindent
+{\color{azultexto}\bfseries\Large II. PRESENTACIÓN}\\[-0.3em]
+{\color{azultexto}\rule{\textwidth}{0.6pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5em}
+\begin{tcolorbox}[
+    enhanced,
+    colback=white,
+    colframe=azultitulo,
+    sharp corners=all,
+    boxrule=0.4pt,
+    left=8pt, right=8pt, top=6pt, bottom=6pt,
+    borderline west={2pt}{0pt}{azultitulo},
+    drop shadow southeast,
+]
+\justifying
+La evolución de la Educación Física está determinada actualmente por los avances sociales, científicos y tecnológicos en el mundo. Las demandas sociales respecto a la formación de hábitos relacionados con el bienestar físico, psicológico y emocional han hecho que el área haya tomado cada vez más importancia en los currículos escolares. Por ello, a través de la Educación Física, se pretende que los estudiantes desarrollen una conciencia crítica hacia el cuidado de su salud y la de los demás, de manera que sean autónomos y capaces de asumir sus propias decisiones para la mejora de la calidad de vida.
+
+\vspace{0.5em}
+El logro del Perfil de egreso de los estudiantes de la Educación Básica Regular se favorece por el desarrollo de diversas competencias. El área de Educación Física se ocupa de promover y facilitar que los estudiantes desarrollen y vinculen las siguientes competencias:
+
+\vspace{-0.5em}
+\begin{itemize}
+  \item Se desenvuelven de manera autónoma a través de su motricidad.
+  \item Asume una vida saludable.
+  \item Interactúa a través de sus habilidades sociomotrices.
+\end{itemize}
+\end{tcolorbox}
+
+% ==== III. ENFOQUE ====
+\vspace{1.5em}
+\noindent
+{\color{azultexto}\bfseries\Large III. ENFOQUE DE LA EDUCACIÓN FÍSICA}\\[-0.3em]
+{\color{azultexto}\rule{\textwidth}{0.6pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\vspace{0.5em}
+\begin{tcolorbox}[
+    enhanced,
+    colback=white,
+    colframe=azultitulo,
+    sharp corners=all,
+    boxrule=0.4pt,
+    left=8pt, right=8pt, top=6pt, bottom=6pt,
+    borderline west={2pt}{0pt}{azultitulo},
+    drop shadow southeast,
+]
+\justifying
+El área se sustenta en el enfoque de la corporeidad, que entiende al cuerpo en construcción de su ser más allá de su realidad biológica, porque implica hacer, pensar, sentir, saber, comunicar y querer. Se refiere a la valoración de la condición de los estudiantes para moverse de forma intencionada, guiados por sus necesidades e intereses particulares y tomando en cuenta sus posibilidades de acción, en la interacción permanente con su entorno \parencite{barrow2018}.
+
+Es un proceso dinámico que se desarrolla a lo largo de la vida, a partir del hacer autónomo de los estudiantes, y se manifiesta en la modificación y/o reafirmación progresiva de su imagen corporal, la cual se integra con otros elementos de su personalidad en la construcción de su identidad personal y social.
+\end{tcolorbox}
+
+\newpage
+
+% ==== IV. CALENDARIZACIÓN DEL AÑO ESCOLAR ====
+\vspace{1.5em}
+\noindent
+{\color{azultexto}\bfseries\Large IV. CALENDARIZACIÓN DEL AÑO ESCOLAR}\\[-0.3em]
+{\color{azultexto}\rule{\textwidth}{0.6pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-1.8em}
+\renewcommand{\arraystretch}{1.2}
+\rowcolors{2}{azulclaro!70}{white}
+\arrayrulecolor{azultexto}
+
+% Tabla escalada y centrada
+\begin{center}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|
+>{\centering\arraybackslash}m{3.2cm}|
+>{\centering\arraybackslash}m{4.2cm}|
+>{\centering\arraybackslash}m{3cm}|
+>{\centering\arraybackslash}m{4.6cm}|}
+\hline
+\rowcolor{azultitulo!20}
+\textbf{\textcolor{azultexto}{Periodos}} & 
+\textbf{\textcolor{azultexto}{Bloques}} & 
+\textbf{\textcolor{azultexto}{Duración}} & 
+\textbf{\textcolor{azultexto}{Fechas de inicio y fin}} \\
+\hline
+Gestión & Primer bloque de semanas de gestión & 02 semanas & Del 03 de marzo al 14 de marzo \\
+I Bimestre & Primer bloque de semanas lectivas & 09 semanas & Del 17 de marzo al 16 de mayo \\
+Gestión & Segundo bloque de semanas de gestión & 01 semana & Del 19 de mayo al 23 de mayo \\
+II Bimestre & Segundo bloque de semanas lectivas & 09 semanas & Del 26 de mayo al 25 de julio \\
+Vacaciones - Gestión & Tercer bloque de semanas de gestión & 02 semanas & Del 28 de julio al 08 de agosto \\
+III Bimestre & Tercer bloque de semanas lectivas & 09 semanas & Del 11 de agosto al 10 de octubre \\
+Gestión & Cuarto bloque de semanas de gestión & 01 semana & Del 13 de octubre al 17 de octubre \\
+IV Bimestre & Cuarto bloque de semanas lectivas & 09 semanas & Del 20 de octubre al 19 de diciembre \\
+Gestión & Quinto bloque de semanas de gestión & 02 semanas & Del 22 de diciembre al 31 de diciembre \\
+\hline
+\end{tabular}%
+}
+\end{center}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ==== V. ORGANIZACIÓN Y DISTRIBUCIÓN DEL TIEMPO ====
+\vspace{1.5em}
+\noindent
+{\color{azultexto}\bfseries\Large V. \textsc{ORGANIZACIÓN Y DISTRIBUCIÓN DEL TIEMPO}}\\[-0.3em]
+{\color{azultexto}\rule{\textwidth}{0.6pt}}
+
+\vspace{0 em}
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{2}{azulclaro!70}{white}
+\arrayrulecolor{azultexto}
+
+\begin{center}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|
+>{\centering\arraybackslash\color{black}}m{1cm}|    % N°
+>{\RaggedRight\arraybackslash\color{black}}m{8cm}|  % Título de unidad (contenido alineado izquierda)
+>{\centering\arraybackslash\color{black}}m{2.8cm}|  % Duración
+>{\centering\arraybackslash\color{black}}m{4cm}|}   % Fecha
+\hline
+\rowcolor{azultitulo!20}
+\multicolumn{1}{|>{\centering\arraybackslash\color{azultexto}\bfseries}m{1cm}|}{N\textsuperscript{o}} &
+\multicolumn{1}{>{\centering\arraybackslash\color{azultexto}\bfseries}m{8cm}|}{Título de las Unidades de Aprendizaje} &
+\multicolumn{1}{>{\centering\arraybackslash\color{azultexto}\bfseries}m{2.8cm}|}{Duración} &
+\multicolumn{1}{>{\centering\arraybackslash\color{azultexto}\bfseries}m{4cm}|}{Fecha} \\
+\hline
+00 & Retornamos con alegría a la escuela para realizar prácticas saludables & 03 semanas & Del 17 de marzo al 04 de abril \\
+01 & Realizamos actividad física y conocemos nuestras medidas antropométricas & 03 semanas & Del 07 de abril al 25 de abril \\
+02 & Nos organizamos para aprender a trabajar cooperativamente & 03 semanas & Del 28 de abril al 16 de mayo \\
+03 & Conocemos y practicamos los juegos de nuestros padres y abuelos & 03 semanas & Del 26 de mayo al 13 de junio \\
+04 & Mejoramos nuestra condición física con juegos de fortalecimiento & 03 semanas & Del 16 de junio al 04 de julio \\
+05 & Celebramos el aniversario de nuestro Perú, con movimientos rítmicos & 03 semanas & Del 07 de julio al 25 de julio \\
+06 & Demostramos diversos tipos de velocidad al realizar actividades lúdicas & 03 semanas & Del 11 de agosto al 29 de agosto \\
+07 & Afianzamos nuestras habilidades motrices básicas en la práctica de actividades lúdicas & 03 semanas & Del 01 de setiembre al 19 de setiembre \\
+08 & Celebramos el día de la Educación Física con acrobacias y coreografías & 03 semanas & Del 22 de setiembre al 10 de octubre \\
+09 & Asumimos retos y desafíos en circuitos de acción motriz & 03 semanas & Del 20 de octubre al 07 de noviembre \\
+10 & Descubrimos nuevas formas de practicar actividad física para el cuidado de la salud & 03 semanas & Del 10 de noviembre al 28 de noviembre \\
+11 & Comparamos los resultados de nuestras medidas antropométricas y capacidades físicas & 03 semanas & Del 01 de diciembre al 19 de diciembre \\
+\hline
+\end{tabular}%
+}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ==== VI. PROPÓSITOS DE APRENDIZAJE ====
+\newpage % Salto de página para que el gráfico ocupe una hoja completa
+
+% Márgenes más estrechos para aprovechar más espacio vertical
+%\newgeometry{top=1.5cm,bottom=1.5cm,left=2cm,right=2cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ==== VI. PROPÓSITOS DE APRENDIZAJE ====
+\vspace{1.5em}
+\noindent
+{\color{azultexto}\bfseries\Large VI. PROPÓSITOS DE APRENDIZAJE}\\[-0.3em]
+{\color{azultexto}\rule{\textwidth}{0.6pt}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.8em}
+\renewcommand{\arraystretch}{2.30}
+\arrayrulecolor{azultexto}
+
+\begin{adjustbox}{max width=\textwidth, max totalheight=\textheight}
+\begin{tabular}{|>{\centering\arraybackslash}m{1.8cm}|
+>{\RaggedRight\arraybackslash}m{5.4cm}|
+*{11}{>{\centering\arraybackslash}m{1.3cm}|}}
+\hline
+\multicolumn{2}{|c|}{\cellcolor{white}} &
+\multicolumn{11}{c|}{\cellcolor{azulclaro!70}\textcolor{azultexto}{\bfseries Organización y distribución por periodos}} \\
+\hline
+\multicolumn{2}{|c|}{\cellcolor{white}} &
+\multicolumn{3}{c|}{\textcolor{azultexto}{\bfseries I Bimestre}} &
+\multicolumn{3}{c|}{\textcolor{azultexto}{\bfseries II Bimestre}} &
+\multicolumn{3}{c|}{\textcolor{azultexto}{\bfseries III Bimestre}} &
+\multicolumn{2}{c|}{\textcolor{azultexto}{\bfseries IV Bimestre}} \\
+\hline
+\multicolumn{2}{|c|}{\cellcolor{white}} &
+\textcolor{azultexto}{Unid 01} & \textcolor{azultexto}{Unid 02} & \textcolor{azultexto}{Unid 03} &
+\textcolor{azultexto}{Unid 04} & \textcolor{azultexto}{Unid 05} & \textcolor{azultexto}{Unid 06} &
+\textcolor{azultexto}{Unid 07} & \textcolor{azultexto}{Unid 08} & \textcolor{azultexto}{Unid 09} &
+\textcolor{azultexto}{Unid 10} & \textcolor{azultexto}{Unid 11} \\
+\hline
+\multicolumn{2}{|c|}{\cellcolor{white}} &
+\rotatebox{90}{\parbox{8cm}{\centering Retornamos con alegría a la escuela para realizar prácticas saludables}} &
+\rotatebox{90}{\parbox{8cm}{\centering Realizamos actividad física y conocemos nuestras medidas antropométricas (entrada)}} &
+\rotatebox{90}{\parbox{8cm}{\centering Nos organizamos para aprender a trabajar cooperativamente}} &
+\rotatebox{90}{\parbox{8cm}{\centering Conocemos y practicamos los juegos de nuestros padres y abuelos}} &
+\rotatebox{90}{\parbox{8cm}{\centering Mejoramos nuestra condición física con juegos de fortalecimiento}} &
+\rotatebox{90}{\parbox{8cm}{\centering Celebramos el aniversario de nuestro Perú, con movimientos rítmicos}} &
+\rotatebox{90}{\parbox{8cm}{\centering Demostramos diversos tipos de velocidad al realizar actividades lúdicas}} &
+\rotatebox{90}{\parbox{8cm}{\centering Afianzamos nuestras habilidades motrices en la práctica de actividades lúdicas}} &
+\rotatebox{90}{\parbox{8cm}{\centering Celebramos el día de la Educación Física con acrobacias y coreografías}} &
+\rotatebox{90}{\parbox{8cm}{\centering Descubrimos nuevas formas de practicar actividad física para el cuidado de la salud}} &
+\rotatebox{90}{\parbox{8cm}{\centering Comparamos los resultados de nuestras medidas antropométricas y capacidades físicas (salida)}} \\
+\hline
+
+\rowcolor{azulclaro!35}
+\textbf{Área} & \textbf{Competencia / Capacidad} & \multicolumn{11}{c|}{} \\
+\hline
+
+\makecell[c]{\rotatebox[origin=c]{90}{\footnotesize\textbf{Educación Física}}} &
+
+\textbf{Se desenvuelve de manera autónoma a través de su motricidad} \newline
+{\footnotesize \textcolor{azultexto}{$\bullet$} Comprende su cuerpo. \newline
+\textcolor{azultexto}{$\bullet$} Se expresa corporalmente.} &
+X & X & X & X & X & X & X & X & X & X & X \\
+\cline{2-13}
+
+& \textbf{Asume una vida saludable} \newline
+{\footnotesize \textcolor{azultexto}{$\bullet$} Comprende las relaciones entre la actividad física, alimentación, postura e higiene personal y del ambiente, y la salud. \newline
+\textcolor{azultexto}{$\bullet$} Incorpora prácticas que mejoran su calidad de vida.} &
+X & X & X & X & X & X & X & X & X & X & X \\
+\cline{2-13}
+
+& \textbf{Interactúa a través de sus habilidades sociomotrices} \newline
+{\footnotesize \textcolor{azultexto}{$\bullet$} Se relaciona utilizando sus habilidades sociomotrices. \newline
+\textcolor{azultexto}{$\bullet$} Crea y aplica estrategias y tácticas de juego.} &
+X & X & X & X & X & X & X & X & X & X & X \\
+\hline
+
+\multicolumn{13}{|c|}{\cellcolor{azulclaro!50}\textcolor{azultexto}{\bfseries Competencias Transversales}} \\
+\hline
+
+\multicolumn{2}{|>{\RaggedRight\arraybackslash}m{7cm}|}{\textbf{Se desenvuelve en los entornos virtuales generados por las TIC} \newline
+{\footnotesize \textcolor{azultexto}{$\bullet$} Personaliza entornos virtuales. \newline
+\textcolor{azultexto}{$\bullet$} Gestiona información del entorno virtual. \newline
+\textcolor{azultexto}{$\bullet$} Interactúa en entornos virtuales. \newline
+\textcolor{azultexto}{$\bullet$} Crea objetos virtuales en diversos formatos.}} &
+X & X & X & X & X & X & X & X & X & X & X \\
+\hline
+
+\multicolumn{2}{|>{\RaggedRight\arraybackslash}m{8cm}|}{\textbf{Gestiona su aprendizaje de manera autónoma} \newline
+{\footnotesize \textcolor{azultexto}{$\bullet$} Define metas de aprendizaje. \newline
+\textcolor{azultexto}{$\bullet$} Organiza acciones estratégicas para alcanzar sus metas propuestas. \newline
+\textcolor{azultexto}{$\bullet$} Monitorea y ajusta su desempeño durante el proceso de aprendizaje.}} &
+X & X & X & X & X & X & X & X & X & X & X \\
+\hline
+\end{tabular}
+\end{adjustbox}
+
+\restoregeometry % Restaura márgenes originales
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+% ==== VII. ENFOQUES TRANSVERSALES ====
+\vspace{1.5em}
+\noindent
+{\color{azultexto}\bfseries\Large VII. ENFOQUES TRANSVERSALES}\\[-0.3em]
+{\color{azultexto}\rule{\textwidth}{0.6pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.8em}
+\renewcommand{\arraystretch}{2.5}
+\arrayrulecolor{azultexto}
+
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|>{\RaggedRight\arraybackslash}m{5.3cm}|
+>{\centering\arraybackslash}m{0.9cm}|
+*{11}{>{\centering\arraybackslash}m{0.9cm}|}}
+\hline
+\rowcolor{azulclaro!50}
+\multicolumn{1}{|c|}{} &
+\multicolumn{12}{c|}{\textcolor{azultexto}{\bfseries Organización y distribución de los enfoques transversales}} \\
+\hline
+\rowcolor{azulclaro!30}
+\cellcolor{white} &
+\multicolumn{3}{c|}{\textcolor{azultexto}{\bfseries I Bimestre}} &
+\multicolumn{3}{c|}{\textcolor{azultexto}{\bfseries II Bimestre}} &
+\multicolumn{3}{c|}{\textcolor{azultexto}{\bfseries III Bimestre}} &
+\multicolumn{3}{c|}{\textcolor{azultexto}{\bfseries IV Bimestre}} \\
+\hline
+\rowcolor{azulclaro!15}
+\textcolor{azultexto}{\bfseries Enfoques Transversales} &
+\textcolor{azultexto}{\bfseries Eval. Diag.} &
+\textcolor{azultexto}{\bfseries Unid 01} & \textcolor{azultexto}{\bfseries Unid 02} &
+\textcolor{azultexto}{\bfseries Unid 03} & \textcolor{azultexto}{\bfseries Unid 04} & \textcolor{azultexto}{\bfseries Unid 05} &
+\textcolor{azultexto}{\bfseries Unid 06} & \textcolor{azultexto}{\bfseries Unid 07} & \textcolor{azultexto}{\bfseries Unid 08} &
+\textcolor{azultexto}{\bfseries Unid 09} & \textcolor{azultexto}{\bfseries Unid 10} & \textcolor{azultexto}{\bfseries Unid 11} \\
+\hline
+
+% 1. De derecho
+\textbf{De derecho} \newline
+{\footnotesize $\bullet$ Docente y estudiantes interactúan en el proceso de enseñanza y aprendizaje cumpliendo con sus obligaciones y respetando el derecho del otro. \newline
+$\bullet$ Docentes y estudiantes se tratan con respeto al jugar juntos, siendo responsable de no afectar a los demás.} &
+ & X & X & & X & & & & & & & X \\
+\hline
+
+% 2. Inclusión
+\textbf{Inclusión o atención a la diversidad} \newline
+{\footnotesize $\bullet$ El docente brinda atención diferenciada a los estudiantes con dificultades en el logro de aprendizajes. \newline
+$\bullet$ Docente y estudiantes interactúan con respeto y buena convivencia en todo momento. \newline
+$\bullet$ Docentes y estudiantes adaptan juegos lúdicos para atender diferencias con necesidades educativas especiales.} &
+ & X & X & X & & X & & X & & & & \\
+\hline
+
+% 3. Intercultural
+\textbf{Intercultural} \newline
+{\footnotesize $\bullet$ Docente y estudiantes valoran el trabajo en equipo, cooperativo y diverso. \newline
+$\bullet$ Docente y estudiantes acogen con respeto a todos, sin excluir ni menospreciar.} &
+ & X & X & & X & & X & & & & & \\
+\hline
+
+% 4. Igualdad de género
+\textbf{Igualdad de género} \newline
+{\footnotesize $\bullet$ El docente promueve la participación en juegos diversos con igualdad de oportunidades. \newline
+$\bullet$ Docentes y estudiantes comparten responsabilidades sin discriminación de género. \newline
+$\bullet$ Se promueve la equidad y respeto en iguales condiciones.} &
+ & X & X & X & & X & & X & & X & & X \\
+\hline
+
+% 5. Ambiental
+\textbf{Ambiental} \newline
+{\footnotesize $\bullet$ Docentes y estudiantes promueven la preservación de entornos saludables. \newline
+$\bullet$ Se fomentan hábitos de higiene y alimentación saludable. \newline
+$\bullet$ Se ordenan los espacios utilizados.} &
+ & & X & & & & X & & & & X & \\
+\hline
+
+% 6. Bien común
+\textbf{Orientación al bien común} \newline
+{\footnotesize $\bullet$ Se promueve el trabajo cooperativo. \newline
+$\bullet$ El docente ofrece oportunidades para asumir responsabilidades.} &
+ & X & X & & & & & & & & X & X \\
+\hline
+
+% 7. Excelencia
+\textbf{Búsqueda de la excelencia} \newline
+{\footnotesize $\bullet$ Se busca mejorar resultados en retos planteados. \newline
+$\bullet$ Se usa el potencial motriz para superar desafíos. \newline
+$\bullet$ Se promueve la superación personal a través del juego.} &
+ & X & X & X & & X & & X & & X & & \\
+\hline
+
+\end{tabular}
+\end{adjustbox}
+
+
+\newpage
+
+% ==== VIII. EVALUACIÓN ====
+\vspace{0.5em}
+\noindent{\Large\bfseries\color{azulencabezado} VIII. EVALUACIÓN}
+\vspace{0.3em}
+
+\begin{tcolorbox}[
+  enhanced,
+  width=\textwidth,
+  colback=white,
+  colframe=azulencabezado,
+  arc=4pt,
+  boxrule=0.5pt,
+  drop shadow southwest,
+  sharp corners=south,
+  top=4pt, bottom=4pt, left=5pt, right=5pt
+]
+
+\begin{tabularx}{\textwidth}{|
+>{\centering\arraybackslash}p{3.1cm}|
+>{\RaggedRight}X|
+>{\RaggedRight}m{4.4cm}|}
+\hline
+\rowcolor{azultexto!10}
+\textbf{\color{azulencabezado}Evaluación} & 
+\multicolumn{1}{c|}{\textbf{\color{azulencabezado}Orientaciones}} & 
+\multicolumn{1}{c|}{\textbf{\color{azulencabezado}Instrumentos}} \\
+\hline
+
+\rowcolor{white}
+\textbf{\color{azulencabezado}Diagnóstica} &
+Se realiza para determinar el propósito de aprendizaje según las necesidades. Al final de cada unidad se reflexiona sobre los avances y dificultades. &
+\multirow[t]{3}{=}{%
+\vspace{-0.8em}
+\begin{itemize}[leftmargin=1.2em, itemsep=-0.2em, topsep=0pt]
+  \item Rúbrica
+  \item Lista de cotejo
+  \item Ficha de observación
+\end{itemize}
+} \\
+
+\cline{1-2}
+
+\rowcolor{white}
+\textbf{\color{azulencabezado}Formativa} &
+Centrada en el aprendizaje del estudiante, con retroalimentación continua durante el proceso. &
+\\
+\cline{1-2}
+
+\rowcolor{white}
+\textbf{\color{azulencabezado}Sumativa} &
+Valora evidencias al final de la unidad. Informa a estudiantes y familias sobre el progreso. &
+\\
+\hline
+\end{tabularx}
+\end{tcolorbox}
+
+% ==== IX. MATERIALES Y RECURSOS A UTILIZAR ====
+\vspace{0.8em}
+\noindent{\Large\bfseries\color{azulencabezado} IX. MATERIALES Y RECURSOS A UTILIZAR}
+\vspace{0.3em}
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=white,
+    colframe=azultitulo,
+    arc=5pt,
+    boxrule=0.5pt,
+    left=6pt, right=6pt, top=4pt, bottom=4pt,
+    borderline west={2pt}{0pt}{azultitulo},
+    drop shadow,
+]
+
+\begin{itemize}[leftmargin=1.5em, itemsep=0.4em]
+  \item \textbf{Inmuebles:} Loza deportiva, campo sintético, pozo de salto, pista atlética.
+  \item \textbf{Muebles y equipo:} Taburetes, tabla de salto, tallímetro.
+  \item \textbf{Materiales:} Conos, cuerdas, colchonetas, pelotas, cinta métrica.
+  \item \textbf{Reciclaje:} Botellas, latas, escobas, neumáticos, jabas, papel.
+  \item \textbf{Escritorio:} Hojas, fichas, papelotes, plumones, masking tape.
+  \item \textbf{Juegos de mesa:} Ajedrez, ludo, cartas, rompecabezas, dominó.
+  \item \textbf{Tecnológicos:} Sonido, proyector, celulares, cronómetro, laptop.
+\end{itemize}
+\end{tcolorbox}
+
+% ==== X. REFERENCIAS BIBLIOGRÁFICAS ====
+\vspace{0.8em}
+\noindent{\normalsize\bfseries\color{azultexto} X. REFERENCIAS BIBLIOGRÁFICAS}
+
+\vspace{0.5em}
+\printbibliography[heading=none]
+
+
+%%%%%%%%%%%%%%%%%%%%%% FIRMA %%%%%%%%%%%%%%%%%%5
+
+\vspace{4.0cm}
+
+\begin{adjustwidth}{-0.80cm}{0cm} % ← Ajusta el primer valor para mover más o menos a la izquierda
+\begin{tabularx}{\textwidth}{X X}
+% Firma 1
+\begin{tcolorbox}[
+  colback=white,
+  colframe=azulencabezado,
+  width=\linewidth,
+  boxrule=0.8pt,
+  left=8pt, right=8pt, top=34pt, bottom=8pt,
+  sharp corners
+]
+\begin{center}
+\vspace{0.5em}
+\textcolor{azulencabezado}{\rule{5.5cm}{0.5pt}}\\[0.6em]
+\textbf{Docente del Área I.E.P.}
+\end{center}
+\end{tcolorbox}
+&
+% Firma 2
+\begin{tcolorbox}[
+  colback=white,
+  colframe=azulencabezado,
+  width=\linewidth,
+  boxrule=0.8pt,
+  left=8pt, right=8pt, top=34pt, bottom=8pt,
+  sharp corners
+]
+\begin{center}
+\vspace{0.5em}
+\textcolor{azulencabezado}{\rule{5.5cm}{0.5pt}}\\[0.6em]
+\textbf{Director de la I.E.P. N° 70195}
+\end{center}
+\end{tcolorbox}
+\end{tabularx}
+\end{adjustwidth}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
